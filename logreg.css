@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fef9c3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.wrapper h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.wrapper p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.input-box {
+    text-align: left;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    transition: 0.2s;
+    background: #fef9c3;
+}
+
+.input-box input:focus {
+    outline: none;
+    border-color: #facc15;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: #facc15;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 8px;
+}
+
+.btn-primary:hover {
+    background: #eab308;
+}
+
+.login-section,
+.register-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.login-section p,
+.register-section p {
+    margin-bottom: 0;
+}
+
+.login-section a,
+.register-section a {
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-section a:hover,
+.register-section a:hover {
+    text-decoration: underline;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(254, 249, 195, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.loading-overlay.active {
+    display: flex;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #e5e5e5;
+    border-top: 5px solid #facc15;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.1rem;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaris - Profile</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <a href="dashboard.html" class="logo">Solaris</a>
+        </div>
+        <div class="nav-right">
+            <div class="student-info">
+                <div class="student-name">Your Name</div>
+                <div class="student-id">UA*********</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="menu-section">
+            <h3>Main</h3>
+            <a href="dashboard.html" class="menu-link" onclick="goTo('dashboard.html')">Dashboard</a>
+            <a href="stuprfl.html" class="menu-link active" onclick="goTo('stuprfl.html')">Student Profile</a>
+            <a href="acrec.html" class="menu-link" onclick="goTo('acrec.html')">Academic Records</a>
+            <a href="acload.html" class="menu-link" onclick="goTo('acload.html')">Academic Load</a>
+        </div>
+        <div class="menu-section">
+            <h3>Account</h3>
+            <a href="settings.html" class="menu-link" onclick="goTo('settings.html')">Settings</a>
+            <a href="login.html" class="menu-logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <div class="header">
+            <h1>Profile Information</h1>
+        </div>
+
+        <div class="profile-stack">
+            <div class="profile-card">
+                <h3>Academic Information</h3>
+                <div class="profile-row"><span class="profile-label">Student Number</span><span class="profile-value">UA*********</span></div>
+                <div class="profile-row"><span class="profile-label">Program</span><span class="profile-value">BS Information Technology</span></div>
+                <div class="profile-row"><span class="profile-label">Campus</span><span class="profile-value">Campus</span></div>
+                <div class="profile-row"><span class="profile-label">Year Level</span><span class="profile-value">1st Year</span></div>
+                <div class="profile-row"><span class="profile-label">Academic Term</span><span class="profile-value">Trimester</span></div>
+                <div class="profile-row"><span class="profile-label">Status</span><span class="profile-value">Active</span></div>
+            </div>
+
+            <div class="profile-card">
+                <h3>Personal Information</h3>
+                <div class="profile-row"><span class="profile-label">First Name</span><span class="profile-value">Yo</span></div>
+                <div class="profile-row"><span class="profile-label">Middle Name</span><span class="profile-value">ur</span></div>
+                <div class="profile-row"><span class="profile-label">Last Name</span><span class="profile-value">name</span></div>
+                <div class="profile-row"><span class="profile-label">Birthday</span><span class="profile-value">September 11, 2001</span></div>
+                <div class="profile-row"><span class="profile-label">Birthplace</span><span class="profile-value">New York</span></div>
+                <div class="profile-row"><span class="profile-label">Gender</span><span class="profile-value">Sigma male</span></div>
+                <div class="profile-row"><span class="profile-label">Civil Status</span><span class="profile-value">Single</span></div>
+                <div class="profile-row"><span class="profile-label">Nationality</span><span class="profile-value">Filipino</span></div>
+                <div class="profile-row"><span class="profile-label">Address</span><span class="profile-value">Antips polo123</span></div>
+            </div>
+
+            <div class="profile-card">
+                <h3>Social and Contact Information</h3>
+                <div class="profile-row"><span class="profile-label">Facebook</span><span class="profile-value">facebook.com/name</span></div>
+                <div class="profile-row"><span class="profile-label">Instagram</span><span class="profile-value">@username</span></div>
+                <div class="profile-row"><span class="profile-label">Twitter</span><span class="profile-value">@username</span></div>
+                <div class="profile-row"><span class="profile-label">Email</span><span class="profile-value">username@gmail.com</span></div>
+                <div class="profile-row"><span class="profile-label">Phone Number</span><span class="profile-value">09671236769</span></div>
+            </div>
+        </div>
+
+        <div class="edit-section">
+            <h3>Edit Information</h3>
+            <form class="edit-form">
+                <div class="edit-grid">
+                    <label class="edit-field"><span>Student Number</span><input type="text" value="UA*********"></label>
+                    <label class="edit-field"><span>Program</span><input type="text" value="Course"></label>
+                    <label class="edit-field"><span>Campus</span><input type="text" value="Campus"></label>
+                    <label class="edit-field"><span>Year Level</span><input type="text" value="Year"></label>
+                    <label class="edit-field"><span>Academic Term</span><input type="text" value="Tri/Sem"></label>
+                    <label class="edit-field"><span>First Name</span><input type="text" value="First Name"></label>
+                    <label class="edit-field"><span>Middle Name</span><input type="text" value="Middle Name"></label>
+                    <label class="edit-field"><span>Last Name</span><input type="text" value="Last Name"></label>
+                    <label class="edit-field"><span>Birthday</span><input type="date" value="Select Date"></label>
+                    <label class="edit-field"><span>Birthplace</span><input type="text" value="Place of Birth"></label>
+                    <label class="edit-field"><span>Gender</span><input type="text" value="Your Gender"></label>
+                    <label class="edit-field"><span>Civil Status</span><input type="text" value="Single"></label>
+                    <label class="edit-field"><span>Nationality</span><input type="text" value="nationality"></label>
+                    <label class="edit-field"><span>Address</span><input type="text" value="address"></label>
+                    <label class="edit-field"><span>Facebook</span><input type="text" value="facebook.com/username"></label>
+                    <label class="edit-field"><span>Instagram</span><input type="text" value="@username"></label>
+                    <label class="edit-field"><span>Twitter</span><input type="text" value="@username"></label>
+                    <label class="edit-field"><span>Email</span><input type="email" value="user@example.com"></label>
+                    <label class="edit-field"><span>Phone Number</span><input type="text" value="+67 676 767 6767"></label>
+                </div>
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function goTo(page) {
+            const overlay = document.getElementById('loadingOverlay');
+            overlay.classList.add('active');
+            
+            setTimeout(function() {
+                window.location.href = page;
+            }, 1500);
+        }
+
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.getElementById('mainContent').classList.toggle('shift');
+        }
+    </script>
+</body>
+</html>

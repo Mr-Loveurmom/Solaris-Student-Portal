@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skolaris - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <a href="dashboard.html" class="logo">Skolaris</a>
+        </div>
+        <div class="nav-right">
+            <div class="student-info">
+                <div class="student-name">Mr beast</div>
+                <div class="student-id">UA*********</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="menu-section">
+            <h3>Main</h3>
+            <a href="dashboard.html" class="menu-link active" onclick="goTo('dashboard.html')">Dashboard</a>
+            <a href="stuprfl.html" class="menu-link" onclick="goTo('stuprfl.html')">Student Profile</a>
+            <a href="acrec.html" class="menu-link" onclick="goTo('acrec.html')">Academic Records</a>
+            <a href="acload.html" class="menu-link" onclick="goTo('acload.html')">Academic Load</a>
+        </div>
+        <div class="menu-section">
+            <h3>Account</h3>
+            <a href="settings.html" class="menu-link" onclick="goTo('settings.html')">Settings</a>
+            <a href="login.html" class="menu-logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <div class="header">
+            <h1>Dashboard</h1>
+        </div>
+
+        <div class="user-section">
+            <h2>Welcome, Mr beast!</h2>
+            <p>mr beast i need this</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Current Grade</h3>
+                <p>?</p>
+            </div>
+            <div class="card">
+                <h3>Enrolled Units</h3>
+                <p>?</p>
+            </div>
+            <div class="card">
+                <h3>Pending Balance</h3>
+                <p>₱?</p>
+            </div>
+            <div class="card">
+                <h3>Announcements</h3>
+                <p>?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goTo(page) {
+            const overlay = document.getElementById('loadingOverlay');
+            overlay.classList.add('active');
+            
+            setTimeout(function() {
+                window.location.href = page;
+            }, 1500);
+        }
+
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.getElementById('mainContent').classList.toggle('shift');
+        }
+    </script>
+</body>
+</html>

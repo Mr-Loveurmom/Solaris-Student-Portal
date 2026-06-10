@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaris - Academic Load</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <a href="dashboard.html" class="logo">Solaris</a>
+        </div>
+        <div class="nav-right">
+            <div class="student-info">
+                <div class="student-name">Your Name</div>
+                <div class="student-id">UA*********</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="menu-section">
+            <h3>Main</h3>
+            <a href="dashboard.html" class="menu-link" onclick="goTo('dashboard.html')">Dashboard</a>
+            <a href="stuprfl.html" class="menu-link" onclick="goTo('stuprfl.html')">Student Profile</a>
+            <a href="acrec.html" class="menu-link" onclick="goTo('acrec.html')">Academic Records</a>
+            <a href="acload.html" class="menu-link active" onclick="goTo('acload.html')">Academic Load</a>
+        </div>
+        <div class="menu-section">
+            <h3>Account</h3>
+            <a href="javascript:void(0)" class="menu-link" onclick="goTo('settings.html')">Settings</a>
+            <a href="login.html" class="menu-logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <div class="header">
+            <h1>Student Academic Load</h1>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Code</th>
+                    <th>Section</th>
+                    <th>Schedule</th>
+                    <th>Faculty</th>
+                    <th>Room</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Introduction to IT</td>
+                    <td>IT01</td>
+                    <td>LFAU167N001</td>
+                    <td>Day / Time</td>
+                    <td>Mr. Beast</td>
+                    <td>Lab</td>
+                </tr>
+                <tr>
+                    <td>Computer Programming 1</td>
+                    <td>CSS01</td>
+                    <td>LFAU167N001</td>
+                    <td>Day / Time</td>
+                    <td>Name</td>
+                    <td>Lab</td>
+                </tr>
+                <tr>
+                    <td>Filipino</td>
+                    <td>0FIL</td>
+                    <td>LFAU167N001</td>
+                    <td>Day / Time</td>
+                    <td>Namae</td>
+                    <td>Room</td>
+                </tr>
+                <tr>
+                    <td>Mathematics</td>
+                    <td>MATH</td>
+                    <td>LFAU167N001</td>
+                    <td>Day / Time</td>
+                    <td>Name</td>
+                    <td>Room</td>
+                </tr>
+                <tr>
+                    <td>Physical Education</td>
+                    <td>PE</td>
+                    <td>LFAU167N001</td>
+                    <td>Day / Time</td>
+                    <td>name</td>
+                    <td>Gym</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cards" style="margin-top: 30px;">
+            <div class="card">
+                <h3>Total Units</h3>
+                <p>67</p>
+            </div>
+            <div class="card">
+                <h3>Total Subjects</h3>
+                <p>67</p>
+            </div>
+            <div class="card">
+                <h3>Section</h3>
+                <p>LFAU167N001</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goTo(page) {
+            const overlay = document.getElementById('loadingOverlay');
+            overlay.classList.add('active');
+            
+            setTimeout(function() {
+                window.location.href = page;
+            }, 1500);
+        }
+
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.getElementById('mainContent').classList.toggle('shift');
+        }
+    </script>
+</body>
+</html>
